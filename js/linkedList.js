@@ -135,17 +135,3 @@ function LinkedList(){
     return length;
   }
 }
-
-// var linklist = new LinkedList();
-
-// for(var i = 0; i<10; i++){
-//   linklist.append(i*2);
-// }
-
-// linklist.removeAt(4);
-// linklist.insert(9,10);
-// linklist.remove(18);
-// linklist.insert(0,1)
-
-// console.log(linklist.toArray());
-// console.log(linklist.indexOf(0));
