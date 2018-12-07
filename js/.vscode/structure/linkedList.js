@@ -90,7 +90,7 @@ function LinkedList(){
  * @return {Any}          移除成功返回被移除的元素，不成功则返回NULL
  */
   this.removeAt = function(position){
-    if(position<0||position>length) return false;
+    if(position<0||position>length-1) return false;
     var current = head;
     var prev;
     var index = 0;

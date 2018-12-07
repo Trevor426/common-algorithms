@@ -64,7 +64,7 @@ class LinkedList{
     return this.removeAt(index);
   }
   removeAt(pos){
-    if(pos<0||pos>this.length) return false;
+    if(pos<0||pos>this.length-1) return false;
     let prev,
         current= this.head,
         index = 0;
@@ -109,12 +109,11 @@ var linklist = new LinkedList();
 for(var i = 0; i<10; i++){
   linklist.append(i*2);
 }
-
-// linklist.removeAt(4);
+// linklist.removeAt(10);
 // linklist.insert(9,10);
 // linklist.remove(18);
 // linklist.insert(0,1);
 
-// console.log(linklist.toArray());
+console.log(linklist.toArray());
 // console.log(linklist.toArray());
 // console.log(linklist.indexOf(0));
