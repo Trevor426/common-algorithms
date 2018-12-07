@@ -76,8 +76,10 @@ class LinkedList{
         current = current.next;
       }
       prev.next = current.next;
-      current = null;//销毁
+      current.next = null;//销毁
     }
+    this.length--;
+    return current.element;
   }
   toString(){
     let current = this.head,str = '';
