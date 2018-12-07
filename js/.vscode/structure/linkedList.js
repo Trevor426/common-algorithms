@@ -102,7 +102,7 @@ function LinkedList(){
         current = current.next;
       }
       prev.next = current.next;
-      current.next = null;
+      current = null;
     }
     length--;
     return current.element;

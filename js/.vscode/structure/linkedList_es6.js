@@ -76,7 +76,7 @@ class LinkedList{
         current = current.next;
       }
       prev.next = current.next;
-      current.next = null;
+      current = null;//销毁
     }
   }
   toString(){
@@ -111,8 +111,8 @@ for(var i = 0; i<10; i++){
 // linklist.removeAt(4);
 // linklist.insert(9,10);
 // linklist.remove(18);
-linklist.insert(0,1);
+// linklist.insert(0,1);
 
-console.log(linklist.toArray());
+// console.log(linklist.toArray());
 // console.log(linklist.toArray());
 // console.log(linklist.indexOf(0));
