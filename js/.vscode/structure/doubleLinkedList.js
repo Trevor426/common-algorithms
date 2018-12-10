@@ -125,6 +125,24 @@ class DoubleLinkedList{
     }
     return arr;
   }
+  reverse(){
+    let current = this.head,prev = null,next = null;
+    while(current){
+      //record next
+      next = current.next;
+      //ps:there is diffrent from single link list
+      prev = current.prev;
+      //change current next and prev
+      current.next = prev;
+      current.prev = next;
+      //update prev and current node
+      prev = current;
+      current = next;
+    }
+    this.tail = this.head;
+    this.head = prev;
+    return this;
+  }
 }
 
 // var dll = new DoubleLinkedList();

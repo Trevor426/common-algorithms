@@ -102,6 +102,24 @@ class LinkedList{
   isEmpty(){
     return this.length === 0;
   }
+  reverse(){
+    let current = this.head,prev = null, next = null;
+    while(current){
+      //record next node
+      next = current.next;
+      //change current's next node
+      current.next = prev;
+      //prev node became to current
+      prev = current;
+      //current  became to next
+      curent = next;  
+    }  
+    //exchange tail and head
+    this.tail = this.head;
+    //prev is at the tail position
+    this.head = prev;
+    return this;
+  }
 }
 
 var linklist = new LinkedList();
