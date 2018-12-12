@@ -1,4 +1,4 @@
-class heap{
+class Heap{
   constructor(){
     this.heapContainer = [];
   }
@@ -40,6 +40,7 @@ class heap{
     }
     return this.heapContainer[0];
   }
+  //iterate and save the result to sort the arr
   poll(){
     if (this.heapContainer.length === 0) {
       return null;
@@ -60,11 +61,19 @@ class heap{
 
   }
   //add item one by one
-  add(item){
+  addItem(item){
     this.heapContainer.push(item);
     this.heapifyUp();
     console.log(this.heapContainer);
     return this;
+  }
+  //add from array
+  addFromArray(arr){
+    this.heapContainer = arr;
+    const len = Math.floor((this.heapContainer.length-2)/2);
+    for(let i = len;i >= 0;i --){
+      this.heapifyDown(i);
+    }
   }
   remove(item){
     //1.Find number of items to remove
@@ -118,6 +127,7 @@ class heap{
     }
   }
   heapifyDown(customStartIndex = 0){
+    console.log(customStartIndex);
     let currentIndex = customStartIndex;
     let nextIndex = null;
     while(this.hasLeftChild(currentIndex)){
@@ -149,14 +159,6 @@ class heap{
   }
 }
 
-// let h = new heap();
-// h.add(8);
-// h.add(3);
-// h.add(4);
-// h.add(9);
-// h.add(10);
-// h.add(12);
-// h.add(15);
-// h.add(10);
-
-// h.remove(10);
+let h = new Heap();
+h.addFromArray([1,2,3,4,5]);
+console.log(h);
