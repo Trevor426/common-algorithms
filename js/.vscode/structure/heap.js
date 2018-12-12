@@ -157,8 +157,9 @@ class Heap{
     // max heap
     return (firstElement >= secondElement)?true:false;
   }
-}
 
+
+}
 let h = new Heap();
 h.addFromArray([1,2,3,4,5]);
 console.log(h);
