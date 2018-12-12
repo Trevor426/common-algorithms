@@ -116,7 +116,7 @@ class LinkedList{
     }  
     //exchange tail and head
     this.tail = this.head;
-    //prev is at the tail position
+    //prev is at the tail
     this.head = prev;
     return this;
   }
