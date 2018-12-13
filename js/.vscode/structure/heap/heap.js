@@ -64,7 +64,7 @@ class Heap{
   addItem(item){
     this.heapContainer.push(item);
     this.heapifyUp();
-    console.log(this.heapContainer);
+    // console.log(this.heapContainer);
     return this;
   }
   //add from array
@@ -99,7 +99,7 @@ class Heap{
         }
       }
     }
-    console.log(this.heapContainer);
+    // console.log(this.heapContainer);
     return this;
   }
   find(item){
@@ -119,7 +119,7 @@ class Heap{
   }
   heapifyUp(customStartIndex){
     let currentIndex = customStartIndex || this.heapContainer.length - 1;
-    console.log('currentindex: ' + currentIndex);
+    // console.log('currentindex: ' + currentIndex);
     while(this.hasParent(currentIndex)&&
       !this.pairIsInCorrectOrder(this.getParent(currentIndex),this.heapContainer[currentIndex])){
       this.swap(currentIndex,this.getParentIndex(currentIndex));
@@ -127,7 +127,7 @@ class Heap{
     }
   }
   heapifyDown(customStartIndex = 0){
-    console.log(customStartIndex);
+    // console.log(customStartIndex);
     let currentIndex = customStartIndex;
     let nextIndex = null;
     while(this.hasLeftChild(currentIndex)){
@@ -155,11 +155,15 @@ class Heap{
     // min heap
     // return (firstElement < secondElement)?true:false;
     // max heap
-    return (firstElement >= secondElement)?true:false;
+    // return (firstElement >= secondElement)?true:false;
+      throw new error(` You have to implement heap pair comparision method 
+      for ${firstElement} and ${secondElement} values. `);
   }
 
 
 }
-let h = new Heap();
-h.addFromArray([1,2,3,4,5]);
-console.log(h);
+
+module.exports = Heap;
+// let h = new Heap();
+// h.addFromArray([1,2,3,4,5]);
+// console.log(h);
