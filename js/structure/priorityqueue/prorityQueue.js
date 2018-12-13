@@ -16,7 +16,7 @@ class ProrityQueue{
         }
       }
       if(!flag){
-        this.queueList.push(node);  
+        this.queueList.push(node);
       }
     }
     console.log(this.queueList);
