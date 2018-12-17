@@ -134,7 +134,7 @@ class Heap{
       //这一步逻辑是非常细节和必要的，通过这一步决定谁作为比较的子节点，也就是根据准父节点
       //如果是小顶堆，就是选择较小的作为准父节点
       //如果是大顶堆,则选择较大的作为准父节点
-      if(this.hasLeftChild(currentIndex)&&this.pairIsInCorrectOrder(this.getRightChild(currentIndex),this.getLeftChild(currentIndex))){
+      if(this.hasRightChild(currentIndex)&&this.pairIsInCorrectOrder(this.getRightChild(currentIndex),this.getLeftChild(currentIndex))){
         nextIndex = this.getRightChildIndex(currentIndex);
       }else{
         nextIndex = this.getLeftChildIndex(currentIndex);
