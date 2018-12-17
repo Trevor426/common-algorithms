@@ -21,14 +21,17 @@ class TrieNode{
       &&!childNode.hasChildren()
       &&!childNode.isCompleteWord
     ){
+      //map delete
       this.children.delete(character);
     }
     return this;
   }
   hasChild(character){
+    //map has
     return this.children.has(character);
   }
   hasChildren(){
+    // map‘s func in es6
     return this.children.size > 0;
   }
   suggestChildren(){
@@ -89,7 +92,6 @@ class Trie{
       if(!currentNode.hasChild(characters[i])) return null;
       currentNode = currentNode.getChild(characters[i]);
     }
+    return currentNode;
   }
 }
-
-
